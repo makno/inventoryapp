@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	@package     it+kapfenberg
+	@subpackage  com_inventory
+	 
+	@copyright   Copyright (C) 2013 Mathias Knoll All rights reserved.
+	@license     GNU AFFERO GENERAL PUBLIC LICENSE Version 3; see LICENSE.txt
+-->
+<metadata>
+	<layout title="COM_INVENTORY_DEVICE_LIST">
+		<message><![CDATA[COM_INVENTORY_DEVICE_LIST_DESC]]></message>
+	</layout>
+	<fields name="request">
+                <fieldset name="request">
+                        <field
+                                name="menu_orgunitid"
+                                type="sql"
+                                label="COM_INVENTORY_DEVICE_ORGUNIT"
+                                description="COM_INVENTORY_DEVICE_ORGUNIT_DESC"
+                                default="0"
+								multiple="false"
+								size="1"
+								query="select orgunit_id, name, shortdescription from #__inventory_orgunits order by name asc"
+								key_field="orgunit_id"
+								value_field="name"
+								required="true"
+                        >
+								<option value="-1">All</option>
+                        </field>
+                </fieldset>
+        </fields>
+</metadata>

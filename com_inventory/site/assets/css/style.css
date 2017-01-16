@@ -1,0 +1,19 @@
+.media .pull-left {
+	margin-right: 10px;
+}
+
+td.small {
+	width: 90px;
+}
+
+td.medium {
+	width: 175px;
+}
+
+.media h4.media-heading {
+	margin: 4px;
+}
+
+div#inventorylist * .pagination{
+	margin: 4px;
+}

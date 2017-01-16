@@ -1,0 +1,26 @@
+<?php defined( '_JEXEC' ) or die( 'Restricted access' ); 
+
+/**
+ * @package     it+kapfenberg
+ * @subpackage  com_inventory
+ *
+ * @copyright   Copyright (C) 2013 Mathias Knoll All rights reserved.
+ * @license     GNU AFFERO GENERAL PUBLIC LICENSE Version 3; see LICENSE.txt
+ */
+
+class InventoryViewsProfileHtml extends JViewHtml
+{
+  function render()
+  {
+    $app = JFactory::getApplication();
+    $layout = $app->input->get('layout');
+
+    $profileModel = new InventoryModelsProfile();
+
+	$this->profiles = $profileModel->listItems();
+    $this->_modalMessage = InventoryHelpersView::load('Profile','_message','phtml');
+	$this->_profileListView = InventoryHelpersView::load('Profile','_entry','phtml');
+
+    return parent::render();
+  } 
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="finder" method="upgrade">
+	<name>it+InventoryFinder</name>
+	<author>Mathias M. Knoll</author>
+	<creationDate>Oct. 2014</creationDate>
+	<copyright>FH JOANNEUM GmbH</copyright>
+	<authorEmail>mathias.knoll@fh-joanneum.at</authorEmail>
+	<authorUrl>http://fh-joanneum.at/itm</authorUrl>
+    <version>1.0.0</version>
+    <description>it+InventoryFinder Plug-In Copyright 2014 by MaKno</description>
+	<files>
+		<file plugin="inventory">inventory.php</file>
+		<file>inventory.xml</file>
+		<filename>index.html</filename>
+		<filename>LICENSE.txt</filename>
+    	<filename>README.txt</filename>
+	</files>
+</extension>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	@package     it+kapfenberg
+	@subpackage  com_inventory
+	 
+	@copyright   Copyright (C) 2013 Mathias Knoll All rights reserved.
+	@license     GNU AFFERO GENERAL PUBLIC LICENSE Version 3; see LICENSE.txt
+-->
+<config>
+	<fieldset name="component"
+		label="COM_INVENTORY_OPTIONS"
+		description="COM_INVENTORY_OPTIONS_DESC"
+	>
+		<field name="required_account" type="radio"
+			default="1"
+			class="btn-group"
+			label="COM_INVENTORY_REQUIRED_ACCOUNT"
+			description="COM_INVENTORY_REQUIRED_ACCOUNT_DESC">
+			
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field name="required_login_method" type="combo"
+			default="Native Joomla"
+			class="btn-group"
+			label="COM_INVENTORY_REQUIRED_LOGIN_METHOD"
+			description="COM_INVENTORY_REQUIRED_LOGIN_METHOD_DESC">
+			
+			<option value="0">Native Joomla</option>
+			<option value="1">LDAP</option>
+		</field>
+
+
+		<field name="maxAllowedDeviceImages" type="integer" 
+			default="5" 
+			label="Device-Images" 
+			description="maximum allowed" 
+			first="1" 
+			last="50" 
+			step="1" />
+
+		<field name="imagepath" type="text"
+					default="/images/devices"
+					label="Device-Image-Path"
+					description="Path where all the device images should reside"/>
+	
+		<field name="show_version" type="radio"
+			default="0"
+			class="btn-group"
+			label="Version"
+			description="Show Version">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	
+		<field name="component_status" type="radio"
+			default="1"
+			class="btn-group"
+			label="Status"
+			description="Component Status">
+			
+			<option value="(Productive)">Productive</option>
+			<option value="(Demo)">Demo</option>
+			<option value="(Test)">Test</option>
+			<option value="(Development)">Development</option>
+		</field>
+
+
+	</fieldset>
+
+	<fieldset name="permissions"
+		description="JCONFIG_PERMISSIONS_DESC"
+		label="JCONFIG_PERMISSIONS_LABEL"
+	>
+		<field name="rules" type="rules"
+			component="com_inventory"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+	</fieldset>
+</config>

@@ -1,0 +1,19 @@
+V 1.1.0 
+-------
+Adapted for Joomla! 3.2.1
+Bugfixed getting all devices per user from API
+Features CRUD with OrgUnits
+
+V 1.1.1
+-------
+Major fix in authcheck.php / onAuthenticate()  (call by reference)
+
+V 1.1.2
+-------
+Added tables in admin to installation xml!
+Minor fix at styles.php helper class (public static)
+
+V 1.2.2
+-------
+Added webservice (controllers/orungit.php and models/orgunit.php)
+Added this webservices to API-Doku

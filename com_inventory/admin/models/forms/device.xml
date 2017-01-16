@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_categories/models/fields">
+		<field name="device_id" type="text" readonly="true"
+			class="readonly" label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="devicename" type="text" label="COM_INVENTORY_NAME" 
+			class="input-xxlarge input-large-text" size="50" required="true" />
+
+		<field name="imageurl" label="COM_INVENTORY_DEVICE_IMAGE" type="media" directory="/" preview="tooltip"
+			class="input-xxlarge input-large-text" size="50" required="true" />
+
+		<field name="snumber" type="text" label="COM_INVENTORY_DEVICE_SNUMBER"
+			class="input-xxlarge input-large-text"
+			size="50" required="true" />
+
+		<field name="qrcode" type="qrcode" label="COM_INVENTORY_DEVICE_QRCODE" 
+			class="input-xxlarge input-large-text" size="50" required="true" qrcodesvgfield="qrcodesvg"
+			/>
+			
+		<field name="qrcodesvg" type="qrcodesvg" readonly="true" 
+			label="COM_INVENTORY_DEVICE_QRCODE_SVG" rows="10" cols="5" filter="raw"
+			class="input-xxlarge input-large-text" 
+			/>
+
+		<field name="shortdescription" type="textarea" default=""
+			label="COM_INVENTORY_DEVICE_SHORTDESC" 
+			rows="10" cols="100" required="false" />
+			
+		<field name="description" type="editor" default=""
+			label="COM_INVENTORY_DEVICE_DESCRIPTION" 
+			 required="false" filter="safehtml"  />
+			
+
+		<field name="location" type="text" label="COM_INVENTORY_DEVICE_LOCATION"
+			class="input-xxlarge input-large-text"
+			size="50" required="true" />
+
+		<field
+            name="orgunit"
+            type="sql"
+            label="COM_INVENTORY_DEVICE_ORGUNIT"
+            description="COM_INVENTORY_DEVICE_ORGUNIT_DESC"
+            default="0"
+			multiple="false"
+			size="1"
+			query="select orgunit_id, name, shortdescription from #__inventory_orgunits order by name asc"
+			key_field="orgunit_id"
+			value_field="name"
+			required="true">
+			<option value="-1">All</option>
+        </field>
+        
+		<field name="tags" type="text" label="COM_INVENTORY_DEVICE_TAGS" description="COM_INVENTORY_DEVICE_TAGS_LONG"
+			class="input-xxlarge input-large-text" size="50" required="true" />
+
+		<field name="active" type="radio" value="1" default="0" label="Active"
+			class="input-xxlarge input-large-text"
+			required="false">
+			<option value="0">JNO</option>
+  			<option value="1">JYES</option>
+		</field>
+
+
+
+	</fieldset>
+</form>

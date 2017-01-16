@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	@package     it+kapfenberg
+	@subpackage  com_inventory
+	 
+	@copyright   Copyright (C) 2013 Mathias Knoll All rights reserved.
+	@license     GNU AFFERO GENERAL PUBLIC LICENSE Version 3; see LICENSE.txt
+-->
+<extension type="component" version="3.2" method="upgrade">
+	<name>com_inventory</name>
+	<author>Mathias M. Knoll</author>
+	<creationDate>June 2013</creationDate>
+	<copyright>FH JOANNEUM GmbH</copyright>
+	<authorEmail>mathias.knoll@fh-joanneum.at</authorEmail>
+	<authorUrl>http://fh-joanneum.at/itm</authorUrl>
+	<version>2.0.0</version>
+	<description>it+Inventory Component Copyright 2013 by MaKno</description>
+	<license>GNU AFFERO GENERAL PUBLIC LICENSE , Version 3, 19 November 2007, See LICENSE.txt</license>
+	
+	<scriptfile>install.php</scriptfile>
+	
+	<files folder="site" destination="com_inventory">
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>views</folder>
+		<filename>index.html</filename>
+		<filename>inventory.php</filename>
+		<filename>router.php</filename>
+		<filename>LICENSE.txt</filename>
+		<filename>README.txt</filename>
+	</files> 
+	
+	<languages folder="site/languages">
+		<language tag="en-GB">en-GB.com_inventory.ini</language>
+		<language tag="de-DE">de-DE.com_inventory.ini</language>
+	</languages>
+	
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+	<administration>
+		<menu link="option=com_inventory" >COM_INVENTORY</menu>
+		<submenu>
+			<menu view="orgunits">COM_INVENTORY_ORGUNITS</menu>
+			<menu view="devices">COM_INVENTORY_DEVICES</menu>
+			<menu view="api">COM_INVENTORY_API</menu>
+			<menu view="about">COM_INVENTORY_ABOUT</menu>
+		</submenu>
+		<files folder="admin"  destination="com_inventory">
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>libraries</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>assets</folder>
+			<folder>sql</folder>
+			<filename>index.html</filename>
+			<filename>controller.php</filename>
+			<filename>inventory.php</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+		</files>  
+		<languages folder="admin/languages">
+			<language tag="en-GB">en-GB.com_inventory.ini</language>
+			<language tag="en-GB">en-GB.com_inventory.sys.ini</language>
+			<language tag="de-DE">de-DE.com_inventory.ini</language>
+			<language tag="de-DE">de-DE.com_inventory.sys.ini</language>
+		</languages>
+	</administration>
+	
+</extension>

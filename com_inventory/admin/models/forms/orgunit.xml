@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_categories/models/fields" >
+		
+		<field name="orgunit_id" type="text" 
+			readonly="true" class="readonly" label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="name" type="text" label="COM_INVENTORY_NAME"
+			description="COM_INVENTORY_ORGUNIT"
+			class="input-xxlarge input-large-text"
+			size="50"
+			required="true" />
+
+		<field name="shortdescription" type="textarea" default="" label="COM_INVENTORY_SHORTDESCRIPTION" 
+			rows="10" cols="100" 
+			required="false"/>
+	</fieldset>
+</form>

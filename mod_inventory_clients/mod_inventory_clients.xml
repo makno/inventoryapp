@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	@package     it+kapfenberg
+	@subpackage  mod_inventory_clients
+	 
+	@copyright   Copyright (C) 2013 Mathias Knoll All rights reserved.
+	@license     GNU AFFERO GENERAL PUBLIC LICENSE Version 3; see LICENSE.txt
+-->
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>mod_inventory_clients</name>
+    <author>Mathias M. Knoll</author>
+	<creationDate>July 2013</creationDate>
+	<copyright>FH JOANNEUM GmbH</copyright>
+	<authorEmail>mathias.knoll@fh-joanneum.at</authorEmail>
+	<authorUrl>http://fh-joanneum.at/itm</authorUrl>
+    <version>1.2.0</version>
+    <description>it+Inventory Client Module Copyright 2013 by MaKno</description>
+    <files>
+		<filename>index.html</filename>
+        <filename>mod_inventory_clients.xml</filename>
+		<filename>phpqrcode.php</filename>
+        <filename module="mod_inventory_clients">mod_inventory_clients.php</filename>
+        <filename>helper.php</filename>
+		<filename>LICENSE.txt</filename>
+		<filename>README.txt</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+		<folder>downloads</folder>
+		<folder>images</folder>
+    </files>
+	<languages>
+			<language tag="en-GB">en-GB.mod_inventory_clients.ini</language>
+			<language tag="en-GB">en-GB.mod_inventory_clients.sys.ini</language>
+			<language tag="de-DE">de-DE.mod_inventory_clients.ini</language>
+			<language tag="de-DE">de-DE.mod_inventory_clients.sys.ini</language>
+		</languages>
+    <config>
+    </config>
+</extension>
